@@ -6,7 +6,7 @@ Use this action to deploy a Widget Package
 
 ```yaml
 - uses: actions/checkout@v3
-- uses: actions/vev/deploy-widget-package
+- uses: vev-design/widget-deploy-action
   with:
     token: 'API-KEY-1234569420'
 ```
