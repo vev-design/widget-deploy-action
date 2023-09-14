@@ -5,21 +5,35 @@ Use this action to deploy a Widget Package
 ## Example
 
 ```yaml
-- uses: actions/checkout@v3
-- uses: vev-design/widget-deploy-action
-  with:
-    token: 'API-KEY-1234569420'
+jobs:
+  deploy-widgets:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Deploy widgets"
+        uses: vev-design/widget-deploy-action  
+        with:
+          token: 'API-KEY-1234569420'
 ```
 
 ## Hello Vev
 
 * Install the Vev CLI and log in
-    * `npm i -g @vev/cli`
-    * `vev login`
+    * ```bash
+      npm i -g @vev/cli
+      ```
+    * ```bash
+      vev login
+      ```
 * Set up a new Widget Package
-    * `vev create package-name`
+    * ```bash
+      vev create package-name
+      ```
 * In the package's folder, remember to initialize your package, this Action can't do this for you
-    * `cd package-name && vev init`
+    * ```bash
+      cd package-name && vev init
+      ```
 * Remember to include the `vev.json` file in your repo
 * Create a Workflow definition and include an API key. You can create keys on your [user profile](https://editor.vev.design/user/profile) in Vev, remember to include the `update:packages` scope.
 
