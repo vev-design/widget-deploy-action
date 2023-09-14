@@ -1,6 +1,10 @@
 name: 'vev/deploy-widget-package'
 description: 'Deploys a Vev Widget Package in your repository'
 
+branding:
+  icon: 'package'
+  color: 'blue'
+
 inputs:
   token:
     description: 'API key'
