@@ -43,3 +43,7 @@ jobs:
 
 **Required**
 An API key with the `update:packages` scope, that belongs to the same account as the Widget Package
+
+## Feedback and feature requests
+
+If you have any ideas you can submit them on our [roadmap page](https://roadmap.vev.design/).
