@@ -9,9 +9,13 @@ inputs:
   token:
     description: 'API key'
     required: true
+  dev-deploy:
+    description: '(non-public) Deploy to Vev staging environment'
+    default: 'false'
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.token }}
+    - ${{ inputs.dev-deploy }}
